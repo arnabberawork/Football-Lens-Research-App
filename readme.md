@@ -38,22 +38,37 @@
 
 5. Run the application:
    ```bash
-   python app.py
+   python football_app.py
    ```
 
 ---
 
 ## Usage
 
-1. Run the application and follow the prompts:
+### Running the Flask Application
+
+1. Run the Flask application:
    ```bash
-   python app.py
+   python football_app.py
    ```
-2. Enter the following details when prompted:
-   - **Research Topic:** Specify the topic (e.g., "Gameweek highlights").
-   - **League Name:** Specify the football league (e.g., "Indian Super League").
-   - **Creativity Limit:** Set a creativity limit (between 0.0 to 1.0).
-3. View the output, including detailed research and a well-structured article.
+
+2. Use the `/generate_blog` endpoint to generate a blog post by sending a POST request with the following JSON payload:
+   ```json
+   {
+     "topic": "Gameweek highlights",
+     "sector": "Indian Super League",
+     "creativity_limit": 0.5
+   }
+   ```
+
+### Running the Streamlit Application
+
+1. Run the Streamlit application:
+   ```bash
+   streamlit run football_page.py
+   ```
+
+2. Follow the instructions on the web interface to generate your football blog post.
 
 ---
 
@@ -78,6 +93,8 @@ FootballLens uses two primary AI agents:
 - **Tools:**
   - [SerperDevTool](https://serper.dev/) for web search and data retrieval.
   - [Dotenv](https://pypi.org/project/python-dotenv/) for environment variable management.
+  - [Streamlit](https://streamlit.io/) for the web interface.
+  - [Flask](https://flask.palletsprojects.com/) for the backend API.
 
 ---
 
@@ -104,7 +121,7 @@ We welcome contributions to enhance FootballLens! To contribute:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
@@ -112,8 +129,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 For queries or suggestions, please reach out to us:
 
-- **Email:** support@footballlens.com
-- **GitHub:** [yourusername/footballlens](https://github.com/yourusername/footballlens)
+- **Linkedin:** [Arnab Bera](https://www.linkedin.com/in/arnabbera-tech/)
+- **GitHub:** [arnabberawork/footballlens](https://github.com/arnabberawork/Football-Lens-Research-App)
 
 ---
 
